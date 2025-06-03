@@ -1,0 +1,189 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+}
+
+aside {
+  width: 250px;
+  background-color: #f4f4f4;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  height: 100vh;
+  position: sticky;
+  top: 0;
+}
+
+aside:hover{
+    width: 350px;
+}
+
+aside a dt {
+  background-color: rgb(235, 207, 164);
+  width: fit-content;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+main {
+  flex-grow: 1;
+  padding: 20px;
+}
+
+.main-heading{
+    text-align: center;
+    margin: 0 auto;
+    color: green; background-color: yellow;
+    border: solid green 2px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    width: 350px;
+}
+.main-heading:hover{
+    text-align: center;
+    margin: 0 auto;
+    color: green; background-color: yellow;
+    border: solid green 2px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    width: 350px;
+}
+
+hr {
+  margin: 40px 0;
+  border: dashed 2px;
+  border-color: lightblue;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+.sample-video {
+  width: 600px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  border: none;
+}
+
+table,
+th,
+td {
+  border: 2px solid black;
+  border-collapse: collapse;
+}
+
+th {
+  padding: 10px;
+  background-color: orange;
+}
+
+td{
+  padding: 10px;
+  background-color: yellow;
+}
+
+.Table-Titles {
+  background-color: orange;
+  text-align: center;
+}
+
+.Table-Elements {
+  background-color: yellow;
+  text-align: center;
+}
+
+th:hover, td:hover{
+  background-color: white;
+}
+
+.shadowbox {
+  box-sizing: border-box;
+  position: relative;
+  width: fit-content;
+  height: auto;
+  padding: 8px 12px;
+  border: 1px solid #333;
+  box-shadow: 8px 8px 5px #444;
+  overflow: hidden;
+  z-index: 0;
+  transition: transform 0.3s ease;
+  background-color: transparent;
+}
+
+/* Gradient layer */
+.shadowbox::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  z-index: -1;
+  background: linear-gradient(45deg, #f7971e 40%, #ffd200 60%);
+  transition: transform 0.3s ease-in-out;
+  transform: rotate(0deg);
+}
+
+/* On hover: smooth rotate background layer only */
+.shadowbox:hover {
+  transform: translate3d(0px, -5px, 0px);
+}
+
+.shadowbox:hover::before {
+  transform: rotate(180deg);
+}
+
+.nav-list {
+  display: inline;
+  margin-right: 50px;
+}
+
+.nav-img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.nav-img:hover{
+    border: solid 2px green;
+    border-radius: 50%;
+    transform: translate3d(5px, -5px, 5px); 
+}
+
+.media-cell {
+  height: 200px;
+  width: 200px;
+}
+
+button{
+    padding: 10px 20px;
+    background-color: rgba(0, 128, 0, 0.901);
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+    color: yellow;
+}
+
+button:hover{
+    background-color: rgba(255, 0, 0, 0.9);
+    transform: translate3d(0 -5px 0);
+}
+
+.pfp{
+  width: 300px; height: 300px; border-radius: 50%; border: solid 4px lightblue;
+  display: block;
+  transition: transform 0.3s ease;
+}
+.pfp:hover{
+    border-radius:10%;
+    transform: translateY(-5px);
+    border-color:lightgreen;
+}
+
+.form-button{
+  margin-left: 60px;
+}

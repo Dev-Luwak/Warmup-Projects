@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Webpage</title>
+    <link rel="shortcut icon" href="Dev-Luwak-PFP.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Sidebar Section -->
+    <aside>
+        <dl>
+            <a href="#section1"><dt>Section 1</dt></a>
+            <dd>This section has a button link</dd>
+
+            <a href="#section2"><dt>Section 2</dt></a>
+            <dd>This section has an image link to my Github profile</dd>
+
+            <a href="#section3"><dt>Section 3</dt></a>
+            <dd>This section shows a video tag</dd>
+
+            <a href="#section4"><dt>Section 4</dt></a>
+            <dd>This section embeds a YouTube video using iframe</dd>
+
+            <a href="#section5"><dt>Section 5</dt></a>
+            <dd>This section embeds Google Maps</dd>
+
+            <a href="#section6"><dt>Section 6</dt></a>
+            <dd>This section uses article tags</dd>
+
+            <a href="#section7"><dt>Section 7</dt></a>
+            <dd>This section uses html tags to make a table</dd>
+
+            <a href="#section8"><dt>Section 8</dt></a>
+            <dd>This section incorporates forms in html</dd>
+
+             <a href="#section9"><dt>Section 9</dt></a>
+            <dd>This section incorporates media tags in html</dd>
+        </dl>
+    </aside>
+
+    <!-- Main Content -->
+    <main style="border: solid 2px red">
+        <h1 class="main-heading"><u>Sample Webpage</u></h1>
+        <hr>
+        <section id="section1">
+            <h2><u>Section 1</u></h2>
+            <div class="shadowbox">
+            <p>Below is a link:</p>
+            <a target="_blank" href="https://i.etsystatic.com/8760538/r/il/e74109/1396352422/il_570xN.1396352422_5duq.jpg">
+                <button>Spank Me!</button>
+            </a>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="section2">
+            <h2><u>Section 2</u></h2>
+            <p>Click on the image to go to my Github account:</p>
+            <div style="margin: 0 auto; width: fit-content; position: sticky; top: 0;">
+                <a href="https://github.com/Dev-Luwak" target="_blank">
+                    <img class="pfp" src="Dev-Luwak-PFP.png" alt="Github Profile">
+                </a>
+            </div>
+        </section>
+        <hr>
+
+        <section id="section3">
+            <h2><u>Section 3</u></h2>
+            <p>This is a sample video:</p>
+            <div style="min-height: 5vh; display: flex; justify-content: center; align-items: center;">
+            <video style="border: 4px solid red"class="sample-video" controls autoplay loop muted>
+                <source src="test-video.mp4" type="video/mp4" alt="Video is not Loading">
+                Your browser doesn't support the video tag.
+            </video>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="section4">
+            <h2><u>Section 4</u></h2>
+            <p>YouTube video using iframe:</p>
+            <iframe width="1200" height="500" src="https://www.youtube.com/embed/CYDP_8UTAus" title="NEFFEX - Fight Back [Official Video] No.37" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </section>
+
+        <hr>
+
+        <section id="section5">
+            <h2><u>Section 5</u></h2>
+            <p>Embedding Google Maps:</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d120378.69944351041!2d72.72255170080982!3d19.462707194845795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7aa23dce7efbf%3A0x99bd87871748d8f4!2sVirar%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1748336240812!5m2!1sen!2sin"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </section>
+        <hr>
+        <section id="section6">
+            <article>
+                <h2><u>Section 6</u></h2>
+                <h2>Article 1</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda mollitia ea minima quasi, autem ab earum, consequuntur dolor natus soluta obcaecati distinctio, placeat officia non fugiat beatae! Id quibusdam est voluptas excepturi illo distinctio odio doloribus aliquam minus, totam inventore, hic nobis? Eos esse consequatur ex corporis amet ab suscipit.</p>
+            </article>
+            <article>
+                <h2>Article 2</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, repellat consequuntur pariatur asperiores tempora ab ducimus ipsam. Beatae, atque nostrum, officia quas itaque quibusdam in accusamus consectetur molestiae molestias dolorem.</p>
+            </article>
+        </section>
+        <hr>
+        <section id="section7">
+            <h2><u>Section 7</u></h2>
+            <table style="margin-left: 100px ;">
+                <tr>
+                    <th class="Table-Titles">First Name</th>
+                    <th class="Table-Titles">Father's Name</th>
+                    <th class="Table-Titles">Last Name</th>
+                </tr>
+                <tr>
+                    <td class="Table-Elements">Pranav</td>
+                    <td class="Table-Elements">Purushottam</td>
+                    <td class="Table-Elements">Choudhary</td>
+                </tr>
+                <tr>
+                    <td class="Table-Elements">Abhinav</td>
+                    <td class="Table-Elements">Purushottam</td>
+                    <td class="Table-Elements">Choudhary</td>
+                </tr>
+            </table>
+        </section>
+        <hr>
+        <section id="section8">
+            <h2><u>Section 8</u></h2>
+            <p style="background-color: aqua; width: fit-content;">This is a Form:</p>
+            <div class="shadowbox">
+            <form>
+                <fieldset>
+                    <legend>Form Area</legend>
+                    <label for="name">Name: </label>
+                    <input type="text" name="name" id="name" placeholder="Name goes here" required><br><br>
+                    <label for="pass">Password:</label>
+                    <input type="password" id="pass" placeholder="Password" required><br><br>
+                    <label for="Account-Type">Account Type:</label>
+                    <select id="Acccount-type">
+                        <option>Student</option>
+                        <option>Employee</option>
+                        <option>Admin</option>
+                    </select><br><br>
+                    <label for="gender">Gender:</label>
+                    <input type="radio" id="gender1" name="gender" value="Male">Male
+                    <input type="radio" id="gender2" name="gender" value="Female">Female<br><br>
+                    <label for="text-area">Enter text:</label>
+                    <textarea name="text-area" id="text-area" placeholder="Enter text here..."></textarea>
+                    <br><br>
+                    <button class="form-button" type="submit">Click to Submit</button>
+                </fieldset>
+            </form>
+            </div>
+        </section>
+        <hr>
+        <section id="section9">
+            <h2><u>Section 9</u></h2>
+            <p>Note: The buttons in the audio columns have been embedded using the iframe tag</p>
+            <table>
+                <thead>
+                    <th>Video</th>
+                    <th>Audio</th>
+                    <th>Images</th>
+                </thead>
+                <tr>
+                    <td>
+                        <video class="media-cell" controls muted>
+                            <source src="https://media.greenscreenmemes.com/2025/05/Good-Mr-beast-and-Kai-Meme-Green-Screen-.mp4" type="video/mp4">
+                            Your browser doesn't support the video tag
+                        </video>
+                    </td>
+                    <td>
+                        <iframe style="color: blue" width="110" height="200" src="https://www.myinstants.com/instant/sad-violin-the-meme-one/embed/" frameborder="0" scrolling="no"></iframe>
+                    </td>
+                    <td>
+                        <img class="media-cell" src="https://static01.nyt.com/images/2020/01/28/multimedia/28xp-memekid3/28cp-memekid3-articleLarge.jpg?quality=75&auto=webp&disable=upscale" alt="Image">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <video class="media-cell" controls muted>
+                            <source src="https://media.greenscreenmemes.com/2025/05/Gorilla-Running-meme-Green-Screen.mp4">
+                            Your browser doesn't support the video tag
+                        </video>
+                    </td>
+                    <td>
+                        <iframe width="110" height="200" src="https://www.myinstants.com/instant/among-us-role-reveal-sound-34956/embed/" frameborder="0" scrolling="no"></iframe>
+                    </td>
+                    <td>
+                        <img class="media-cell" src="https://assets.entrepreneur.com/content/3x2/2000/20180703190744-rollsafe-meme.jpeg?format=pjeg&auto=webp&crop=4:3" alt="Image">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <video class="media-cell" controls muted>
+                            <source src="https://media.greenscreenmemes.com/2025/05/Bro-dancing-meme-Green-Screen.mp4">
+                            Your browser doesn't support the video tag
+                        </video>
+                    </td>
+                    <td>
+                        <iframe width="110" height="200" src="https://www.myinstants.com/instant/directed-by-robert-b-weide-451/embed/" frameborder="0" scrolling="no"></iframe>
+                    </td>
+                    <td>
+                        <img style="border-radius: 50%" class="media-cell" src="https://img.freepik.com/free-vector/simple-vibing-cat-square-meme_742173-4493.jpg?semt=ais_hybrid&w=740" alt="Image">
+                    </td>
+                </tr>
+            </table>
+        </section>
+        <hr>
+        <section>
+            <h2>Get in touch with Dev-Luwak  &#128521;:</h2>
+        <nav>
+            <ul>
+                <li class="nav-list"><a target="_blank" href="https://www.instagram.com/pranavc_023/"><img class="nav-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHP2W0X8Bj9Wwou8Y5Iv2q_Aa-nME9SMwEAA&s" alt="Instagram"></a></li>
+                <li class="nav-list"><a target="_blank" href="https://www.linkedin.com/in/pc-964894253/"><img class="nav-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/960px-LinkedIn_logo_initials.png" alt="LinkedIn"></a></li>
+                <li class="nav-list"><a target="_blank" href="https://github.com/Dev-Luwak"><img class="nav-img" src="https://images.icon-icons.com/3685/PNG/512/github_logo_icon_229278.png" alt="Github"></a></li>
+                <li class="nav-list"><a target="_blank" href="mailto:pranavc230@gmail.com"><img class="nav-img" src="https://images.icon-icons.com/2642/PNG/512/google_mail_gmail_logo_icon_159346.png" alt="Mail"></a></li>
+                <li class="nav-list"><a target="_blank" href="tel:+919022817844"><img class="nav-img" src="https://freesvg.org/img/molumen_phone_icon.png" alt="Phone"></a></li>
+            </ul>
+        </nav>
+        </section>
+    </main>
+
+</body>
+</html>
