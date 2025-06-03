@@ -1,0 +1,78 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      min-height: 100vh;
+      color: white;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(270deg, #ff6ec4, #7873f5, #4ADEDE);
+      background-size: 600% 600%;
+      animation: gradientAnimation 10s ease infinite;
+      border-bottom: 4px solid #ffffff20;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      color: white;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    @keyframes gradientAnimation {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .projects {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 40px 20px;
+      gap: 30px;
+    }
+
+    .card {
+      background: linear-gradient(135deg, #43cea2, #185a9d);
+      padding: 30px;
+      border-radius: 15px;
+      width: 250px;
+      height: 150px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      transition: transform 0.3s ease, background 0.5s ease;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .card a {
+      font-size: 1.2rem;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .card:hover {
+      transform: scale(1.08);
+      background: linear-gradient(135deg, #ff9966, #ff5e62);
+    }
+
+    .card:hover a {
+      color: #fffbe0;
+    }
+
+    @media (max-width: 600px) {
+      .card {
+        width: 80%;
+      }
+    }
