@@ -37,7 +37,7 @@
       background: linear-gradient(135deg, #43cea2, #185a9d);
       padding: 30px;
       border-radius: 15px;
-      width: 250px;
+      width: 100%;
       height: 150px;
       display: flex;
       justify-content: center;
@@ -63,16 +63,11 @@
       color: #fffbe0;
     }
 
-    @media (max-width: 600px) {
-      .card {
-        width: 80%;
-      }
-    }
-
     .cooking-card {
   background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
   border: 2px solid #ffb88c;
   box-shadow: 0 8px 24px rgba(252, 182, 156, 0.15);
+  width: 100%;
 }
 
 .cooking-card a {
@@ -103,6 +98,21 @@
   padding: 40px 20px;
 }
 
+@media (max-width: 900px) {
+  .projects {
+    width: 98%;
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+    gap: 18px;
+    padding: 20px 0;
+    justify-content: center;
+  }
+  .card {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
 .empty-card {
   background: transparent;
   box-shadow: none;
