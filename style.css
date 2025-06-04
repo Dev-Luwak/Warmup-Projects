@@ -77,26 +77,23 @@
       }
     }
 
-    .weather-card {
-  flex-direction: column;
-  gap: 15px;
+    .cooking-card {
+  background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+  border: 2px solid #ffb88c;
+  box-shadow: 0 8px 24px rgba(252, 182, 156, 0.15);
 }
 
-.weather-btn {
-  margin-top: 10px;
-  padding: 10px 20px;
-  background: linear-gradient(90deg, #4ADEDE, #7873f5);
+.cooking-card a {
+  color: #b3541e;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.cooking-card:hover {
+  background: linear-gradient(135deg, #fcb69f 0%, #ffecd2 100%);
+  transform: scale(1.08);
+}
+
+.cooking-card:hover a {
   color: #fff;
-  border: none;
-  border-radius: 8px;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.3s, transform 0.2s;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
-
-.weather-btn:hover {
-  background: linear-gradient(90deg, #ff9966, #ff5e62);
-  transform: scale(1.05);
 }
