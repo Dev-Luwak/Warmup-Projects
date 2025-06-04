@@ -76,3 +76,27 @@
         width: 80%;
       }
     }
+
+    .weather-card {
+  flex-direction: column;
+  gap: 15px;
+}
+
+.weather-btn {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: linear-gradient(90deg, #4ADEDE, #7873f5);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.weather-btn:hover {
+  background: linear-gradient(90deg, #ff9966, #ff5e62);
+  transform: scale(1.05);
+}
