@@ -9,20 +9,27 @@ const suggestions = document.getElementById('suggestions');
 const getWeatherBtn = document.getElementById('get-weather-btn');
 const weatherResult = document.getElementById('weather-result');
 
+// ...existing code...
+
+let selectedSuggestionIndex = -1;
+
 cityInput.addEventListener('input', function() {
     const value = this.value.toLowerCase();
     suggestions.innerHTML = '';
+    selectedSuggestionIndex = -1;
     if (value) {
         const filtered = cities.filter(city => city.toLowerCase().startsWith(value));
         if (filtered.length > 0) {
             suggestions.style.display = 'block';
-            filtered.forEach(city => {
+            filtered.forEach((city, idx) => {
                 const li = document.createElement('li');
                 li.textContent = city;
+                li.tabIndex = 0;
                 li.addEventListener('click', function() {
                     cityInput.value = city;
                     suggestions.innerHTML = '';
                     suggestions.style.display = 'none';
+                    selectedSuggestionIndex = -1;
                 });
                 suggestions.appendChild(li);
             });
@@ -34,20 +41,42 @@ cityInput.addEventListener('input', function() {
     }
 });
 
-cityInput.addEventListener('focus', function() {
-    if (suggestions.children.length > 0) {
-        suggestions.style.display = 'block';
+cityInput.addEventListener('keydown', function(e) {
+    const items = suggestions.querySelectorAll('li');
+    if (suggestions.style.display === 'block' && items.length > 0) {
+        if (e.key === 'ArrowDown') {
+            e.preventDefault();
+            selectedSuggestionIndex = (selectedSuggestionIndex + 1) % items.length;
+            updateSuggestionHighlight(items);
+        } else if (e.key === 'ArrowUp') {
+            e.preventDefault();
+            selectedSuggestionIndex = (selectedSuggestionIndex - 1 + items.length) % items.length;
+            updateSuggestionHighlight(items);
+        } else if (e.key === 'Enter') {
+            if (selectedSuggestionIndex >= 0) {
+                e.preventDefault();
+                cityInput.value = items[selectedSuggestionIndex].textContent;
+                suggestions.innerHTML = '';
+                suggestions.style.display = 'none';
+                selectedSuggestionIndex = -1;
+            }
+            getWeatherBtn.click();
+        }
+    } else if (e.key === 'Enter') {
+        getWeatherBtn.click();
     }
 });
 
-document.addEventListener('click', function(e) {
-    if (e.target !== cityInput && e.target.parentNode !== suggestions) {
-        suggestions.innerHTML = '';
-        suggestions.style.display = 'none';
-    }
-});
+function updateSuggestionHighlight(items) {
+    items.forEach((item, idx) => {
+        if (idx === selectedSuggestionIndex) {
+            item.classList.add('highlighted');
+        } else {
+            item.classList.remove('highlighted');
+        }
+    });
+}
 
-// ...existing code...
 
 getWeatherBtn.addEventListener('click', async function() {
     const city = cityInput.value.trim();
@@ -84,4 +113,3 @@ getWeatherBtn.addEventListener('click', async function() {
         weatherResult.innerHTML = `<div class="weather-detail">Error fetching weather data.</div>`;
     }
 });
-// ...existing code...
