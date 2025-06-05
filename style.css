@@ -79,9 +79,6 @@
 .cooking-card:hover {
   background: linear-gradient(135deg, #fcb69f 0%, #ffecd2 100%);
   transform: scale(1.08);
-}
-
-.cooking-card:hover a {
   color: #fff;
 }
 
