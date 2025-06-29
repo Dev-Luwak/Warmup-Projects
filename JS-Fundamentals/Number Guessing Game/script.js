@@ -1,3 +1,5 @@
+const { useLayoutEffect } = require("react");
+
 const randomNumber = Math.floor(Math.random() * 100) + 1;
 let attempts = 10;
 
